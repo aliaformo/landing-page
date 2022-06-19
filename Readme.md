@@ -14,7 +14,7 @@ Visual Studio Code Editor
 
 Git 
 
-Git repository 
+GitHub repository 
 
 Github pages
 
