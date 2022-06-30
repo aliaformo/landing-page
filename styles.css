@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -8,6 +9,9 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 header {
     background: url('images/bg-hero-desktop.svg');
     padding: 0 2em;
@@ -44,23 +48,11 @@ nav ul {
     margin-bottom: 70px;
     animation-duration: 1s;
     animation-name: slidein;
-    transition: transform .2s;
+    transition: transform .9s;
 }
 
 .first_container img:hover {
-    transform: scale(1.1); 
-}
-
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
+    transform: scale(1.1);
 }
 
 button {
@@ -73,7 +65,10 @@ button {
     background-color: white;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: wiggle 1.5s infinite;
+    transition: transform .2s;
 }
+
 
 .rbuttons {
     background-color: hsl(322, 100%, 66%);
@@ -82,12 +77,13 @@ button {
     font-weight: bold;
     padding: 15px 40px;
     transition: transform .2s;
+    animation: fadein 1.5s infinite;
 }
 
 button:hover {
     opacity: 70%;
     cursor: pointer;
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 
@@ -136,11 +132,11 @@ main>div h2 {
     gap: 4em;
     min-width: 250px;
     transition: transform .1s;
-    }
+}
 
 
 .grid_container img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .grid_container p {
@@ -198,11 +194,23 @@ footer section {
 }
 
 .footer_data ul li:hover {
-    text-decoration: underline;
     cursor: pointer;
-    transform: scale(1.2); 
+    transform: scale(1.05);
 }
 
+ul li .linea {
+    display: block;
+    height: 1px;
+    width: 0;
+    transition: .2s;
+    background: rgb(232, 216, 216);
+}
+
+ul li:hover .linea {
+    
+    width: 30%;
+    
+}
 
 .footer_data ul li a {
     color: rgb(232, 216, 216);
@@ -232,13 +240,111 @@ footer section {
     color: hsl(322, 100%, 66%);
     border: 1px solid hsl(322, 100%, 66%);
     cursor: pointer;
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
+
+.rotateX:hover {
+	transform: rotateX(360deg);
+	-moz-transform: rotateX(360deg);
+	-webkit-transform: rotateX(360deg);
+	transform-origin: center;
+	-moz-transform-origin: center;
+	-webkit-transform-origin: center;
+	transition: 2.0s ease;
+	-moz-transition: 2.0s ease;
+	-webkit-transition: 2.0s ease;
+}
+
+.rotateY:hover {
+	transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+	transform-origin: center;
+	-moz-transform-origin: center;
+	-webkit-transform-origin: center;
+	transition: 2.0s ease;
+	-moz-transition: 2.0s ease;
+	-webkit-transition: 2.0s ease;
+}
+
+.rotate:hover {
+	transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform-origin: center;
+	-moz-transform-origin: center;
+	-webkit-transform-origin: center;
+	transition:  2s;
+	-moz-transition: 2s;
+	-webkit-transition:  2s;
+}
+
+
+
+/* ----------------------Keyframes-------------------------------------- */
+
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0.5;
+        }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 
 /*==========media queries==========*/
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
 
     header {
         margin: 2em;
@@ -300,9 +406,15 @@ footer section {
         text-align: left;
         margin-left: 0px;
     }
-    
+
     .footer_socia ul li {
         margin-bottom: 0px;
+    }
+
+    ul li:hover .linea {
+    
+        width: 90%;
+        
     }
 
     footer p {
@@ -313,4 +425,5 @@ footer section {
     main {
         margin: 0 1em;
     }
+
 }
