@@ -1,21 +1,17 @@
 # 📝 This is a task for I4GxZuri
 
-## ✍ Instructions
-Build a responsive landing page using the design.
+## 📜 Task Title:
+- Responsiveness and Media Queries
 
-Add a basic animation/transition to your implementation.
+### ✍ Instructions:
+- Build a responsive landing page using the design. Add a basic animation/transition to your implementation.
 
-## 🔧 Tools 
-Html 4 
+### 🔧 Tools 
+- Html 5
+- CSS 3 
+- Visual Studio Code Editor 
+- Git 
+- GitHub repository 
+- Github pages
 
-CSS 3 
-
-Visual Studio Code Editor 
-
-Git 
-
-GitHub repository 
-
-Github pages
-
-### Thank you I4GxZuri team and mentors
+#### ⭐ Thanks I4GxZuri Team and Mentors 🏅
