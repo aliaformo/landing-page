@@ -1,7 +1,6 @@
 # 📝 This is a task for I4GxZuri
 
-## 📜 Task Title:
-- Responsiveness and Media Queries
+## 📜 Task Title: Responsiveness and Media Queries
 
 ### ✍ Instructions:
 - Build a responsive landing page using the design. Add a basic animation/transition to your implementation.
